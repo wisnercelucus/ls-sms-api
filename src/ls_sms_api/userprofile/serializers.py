@@ -8,7 +8,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password':{'write_only': True}}
 
     def create(self, validated_data):
-
         user = models.UserProfile(
                 email = validated_data['email'],
                 name = validated_data['name']
